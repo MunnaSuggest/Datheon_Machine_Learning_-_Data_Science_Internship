@@ -5,10 +5,10 @@ Welcome to my submission repository for the **Datheon Machine Learning & Data Sc
 ---
 
 ## 📌 Repository Structure
-```
 ├── Task # 1.ipynb      # Multi-Class Benchmark Classification Pipeline
+├── Task # 2.ipynb      # Real Estate Housing Price Prediction (Ridge & Lasso)
 └── README.md           # Project Documentation
-```
+
 ## 🚀 Tasks Overview
 
 ### **Task 1: Multi-Class Benchmark Classification Pipeline (Iris Dataset)**
@@ -23,12 +23,24 @@ Welcome to my submission repository for the **Datheon Machine Learning & Data Sc
 
 ---
 
+### **Task 2: Real Estate Housing Price Prediction (Ridge & Lasso Regression)**
+- **Objective:** Predict median house values using the California Housing dataset using continuous regression models and regularization techniques.
+- **Workflow & Techniques:**
+  - **Data Imputation & Preprocessing:** Handled missing values using `SimpleImputer` and normalized continuous features using `StandardScaler`.
+  - **Feature Engineering:** Created domain-specific interaction features (e.g., rooms per household, bedrooms per room).
+  - **Model Training & Hyperparameter Tuning:** Fitted OLS Linear Regression, Ridge (L2), and Lasso (L1) models utilizing `GridSearchCV` for optimal alpha selection.
+  - **Evaluation Metrics:** Evaluated model performance across RMSE, MAE, $R^2$ scores, and analyzed residual error distribution plots.
+- **Deliverables:**
+  - Jupyter Notebook comparing model regression metrics and residual error plots.
+
+---
+
 ## 🛠️ Tools & Libraries Used
 
 - **Language:** Python
 - **Data Manipulation:** Pandas, NumPy
 - **Data Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** Scikit-Learn (`LogisticRegression`, `DecisionTreeClassifier`, `StandardScaler`, `train_test_split`)
+- **Machine Learning:** Scikit-Learn (`LinearRegression`, `Ridge`, `Lasso`, `GridSearchCV`, `SimpleImputer`, `StandardScaler`)
 
 ---
 

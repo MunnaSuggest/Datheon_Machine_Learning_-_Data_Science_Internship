@@ -1,46 +1,63 @@
 # Datheon Machine Learning & Data Science Internship
 
-Welcome to my submission repository for the **Datheon Machine Learning & Data Science Internship** program. This repository contains end-to-end Jupyter Notebooks, datasets, and visualizations for the assigned internship tasks.
+Welcome to my official submission repository for the **Datheon Machine Learning & Data Science Internship** program. This repository contains end-to-end Jupyter Notebooks, datasets, feature engineering pipelines, and visualizations for all 4 assigned internship tasks.
 
 ---
 
 ## 📌 Repository Structure
 ├── Task # 1.ipynb      # Multi-Class Benchmark Classification Pipeline
 ├── Task # 2.ipynb      # Real Estate Housing Price Prediction (Ridge & Lasso)
-└── README.md           # Project Documentation
+├── Task # 3.ipynb      # Predictive Customer Churn Classifier (Random Forest & XGBoost)
+├── Task # 4.ipynb      # NLP Sentiment Classification on Customer Reviews (TF-IDF)
+└── README.md           # Master Project Documentation
 
 ## 🚀 Tasks Overview
 
 ### **Task 1: Multi-Class Benchmark Classification Pipeline (Iris Dataset)**
 - **Objective:** Build an end-to-end classification pipeline to classify Iris flower species using machine learning models.
 - **Workflow & Techniques:**
-  - **Exploratory Data Analysis (EDA):** Visualized feature distributions and species relationships using Seaborn pairplots.
-  - **Preprocessing & Normalization:** Applied train-test split (80/20) and standardized features using `StandardScaler`.
-  - **Model Training:** Trained two models: **Logistic Regression** and **Decision Tree Classifier**.
-  - **Evaluation Metrics:** Evaluated models using Precision, Recall, F1-Score, Accuracy, and Confusion Matrices.
-- **Deliverables:**
-  - Jupyter Notebook containing complete analysis, model outputs, and confusion matrix heatmaps.
+  - **EDA:** Visualized feature distributions and species relationships using Seaborn pairplots.
+  - **Preprocessing:** Applied stratified train-test split (80/20) and standardized continuous features using `StandardScaler`.
+  - **Models:** Trained **Logistic Regression** and **Decision Tree Classifier**.
+  - **Evaluation:** Precision, Recall, F1-Score, Accuracy, and Confusion Matrices.
 
 ---
 
 ### **Task 2: Real Estate Housing Price Prediction (Ridge & Lasso Regression)**
 - **Objective:** Predict median house values using the California Housing dataset using continuous regression models and regularization techniques.
 - **Workflow & Techniques:**
-  - **Data Imputation & Preprocessing:** Handled missing values using `SimpleImputer` and normalized continuous features using `StandardScaler`.
-  - **Feature Engineering:** Created domain-specific interaction features (e.g., rooms per household, bedrooms per room).
-  - **Model Training & Hyperparameter Tuning:** Fitted OLS Linear Regression, Ridge (L2), and Lasso (L1) models utilizing `GridSearchCV` for optimal alpha selection.
-  - **Evaluation Metrics:** Evaluated model performance across RMSE, MAE, $R^2$ scores, and analyzed residual error distribution plots.
-- **Deliverables:**
-  - Jupyter Notebook comparing model regression metrics and residual error plots.
+  - **Data Handling:** Imputed missing values via `SimpleImputer` and normalized features using `StandardScaler`.
+  - **Feature Engineering:** Added domain-specific interaction features (rooms per household, bedrooms per room).
+  - **Models:** Fitted OLS Linear Regression, Ridge (L2), and Lasso (L1) models utilizing `GridSearchCV` for hyperparameter tuning.
+  - **Evaluation:** Evaluated RMSE, MAE, $R^2$ scores, and residual error distribution plots.
+
+---
+
+### **Task 3: Predictive Customer Churn Classifier (Random Forest & XGBoost)**
+- **Objective:** Address severe class imbalance and predict telecom customer churn using ensemble learning.
+- **Workflow & Techniques:**
+  - **Preprocessing:** Encoded categorical features with `OneHotEncoder` and balanced target class distribution using `SMOTE`.
+  - **Models:** Trained **Random Forest** and **XGBoost** classifiers with cross-validation.
+  - **Evaluation:** Plotted ROC-AUC curves (>80% AUC benchmark), confusion matrices, and extracted top 10 feature importances.
+
+---
+
+### **Task 4: NLP Sentiment Classification on Customer Reviews (TF-IDF)**
+- **Objective:** Construct an NLP text classifier to identify positive and negative sentiment from customer reviews.
+- **Workflow & Techniques:**
+  - **Text Preprocessing:** Lowercasing, regex cleaning (HTML/special chars), stopword removal, and WordNet lemmatization.
+  - **Feature Extraction:** Converted clean corpus into numerical vectors using `TfidfVectorizer` (max 5,000 features).
+  - **Models:** Benchmark comparison between **Multinomial Naive Bayes** and **Logistic Regression**.
+  - **Deliverable:** Built an interactive `predict_sentiment()` helper function for live custom text inference.
 
 ---
 
 ## 🛠️ Tools & Libraries Used
 
-- **Language:** Python
-- **Data Manipulation:** Pandas, NumPy
-- **Data Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** Scikit-Learn (`LinearRegression`, `Ridge`, `Lasso`, `GridSearchCV`, `SimpleImputer`, `StandardScaler`)
+- **Languages & Core:** Python, Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-Learn, XGBoost, Imbalanced-learn (SMOTE)
+- **Natural Language Processing:** NLTK, Regular Expressions (`re`)
 
 ---
 
